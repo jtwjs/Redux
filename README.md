@@ -1,1 +1,2 @@
-ECHO°¡ ¼³Á¤µÇ¾î ÀÖ½À´Ï´Ù.
+# Redux 
+reduxì˜ ê¸°ì´ˆë¥¼ í•™ìŠµ
