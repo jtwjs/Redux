@@ -1,6 +1,6 @@
 # Redux
 
-**리덕스(Redux)**는 Javascript app을 위한 상태관리 라이브러리이다.
+**리덕스(Redux)** 는 Javascript app을 위한 상태관리 라이브러리이다.
 
 리액트 뿐아니라 Angular, jQuery, vanila js등 다양한 framework와 작동되게 설계됨
 
