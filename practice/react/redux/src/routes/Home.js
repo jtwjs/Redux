@@ -1,10 +1,11 @@
-import React, {useState, useRef, useEffect} from 'react';
+import React, {useState, useRef, useEffect, memo} from 'react';
 import {connect} from 'react-redux';
 import ToDo from '../componenets/todo';
-import {actionCreators} from '../store';
+import {add} from '../store';
 
 
-const Home = ({toDos, addToDo, storage}) => {
+const Home = memo(({toDos, addToDo, storage}) => {
+  console.log('Home');
   const [text, setText] = useState("");
   const inputRef = useRef();
   const formRef = useRef();
@@ -49,7 +50,7 @@ const Home = ({toDos, addToDo, storage}) => {
       </ul>
     </>
   );
-};
+});
 
 function mapStateToProps(state) {
   return {toDos: state}
@@ -57,7 +58,7 @@ function mapStateToProps(state) {
 
 function mapDispatchToProps(dispatch) {
   return {
-    addToDo: (text) => dispatch(actionCreators.addToDo(text))
+    addToDo: (text) => dispatch(add(text))
   }
 
 }

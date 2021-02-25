@@ -5,14 +5,16 @@ import Detail from './routes/Detail';
 import { useEffect } from 'react';
 import Storage from './util/storage';
 import {connect} from 'react-redux';
-import {actionCreators} from './store';
+import {init} from './store';
 
 const TODO_LIST = "todoList";
 const storage = new Storage(TODO_LIST);
 
 function App({initToDo}) {
+  console.log('App');
   useEffect(() => {
     const list = storage.loadToDos();
+    console.log('실행');
     if(list !== null) {
         initToDo(list);
     };
@@ -31,7 +33,7 @@ function App({initToDo}) {
 }
 const mapDispatchToProps = (dispatch) => {
   return {
-    initToDo: (list) => dispatch(actionCreators.initToDo(list))
+    initToDo: (list) => dispatch(init(list))
   }
 }
 
